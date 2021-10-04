@@ -1,0 +1,54 @@
+figure  {
+    background:url($logo) no-repeat 0 50px;
+    display:block;
+    margin:0;
+    @include navigation_menu(400px, 190px, left);
+    @include media(959px) {
+      @include navigation_menu(inherit, 140px, none);
+      background-position:center;
+    }
+    @include media(459px) {
+      background-size:contain;
+      height:100px;
+    }
+  }
+  
+  nav {
+    @include navigation_menu(540px, 190px, left);
+    @include media(959px) {
+      @include navigation_menu(inherit, 50px, none);
+      text-align:center;
+    }
+    @include media(459px) {
+      margin-bottom:40px !important;
+    }
+    text-align:right;
+    ul {
+      list-style-type: none;
+      margin-top:95px;
+      li {
+        display:inline;
+        font-size:0.8em;
+        margin-right:10px;
+        a {
+          color: $red-color;
+          text-decoration:none;
+          letter-spacing:-0.01em;
+          &:hover {
+            color: $white;
+          }
+        }
+        @include media(959px) {
+          font-size:1em;
+          margin:0 10px;
+        }
+        @include media(767px) {
+          font-size:0.8em;
+          margin:0 5px;
+        }  
+      }
+      @include media(959px) {
+        margin-top:0;
+      }
+    }
+  }

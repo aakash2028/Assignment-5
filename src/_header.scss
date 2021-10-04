@@ -1,0 +1,59 @@
+header  {
+  width:inherit;
+  clear:both;
+  text-align:center;
+  padding-top:20px;
+}
+
+header img  {
+  max-width:100%;
+  height:auto;
+  @include media(767px) {
+    margin-bottom:100px;
+  }
+  @include media(459px) {
+    margin-bottom:80px;
+  }
+}
+
+header h1 {
+  @include headers($red-color, 100, 4em);
+  @include media(959px) {
+    font-size:3em;
+  }
+  @include media(767px) {
+    font-size:2em;
+  }
+  @include media(459px) {
+    & :first-child {
+      font-size:1.4em;
+      margin-bottom:20px;
+    }
+  }
+}
+
+header h2 {
+  @include headers($white, 900, 2.5em); 
+  margin-bottom: 70px;
+  @include media(959px) {
+    font-size:1.5em;
+  }
+  @include media(767px) {
+    font-size:1em;
+  }
+  @include media(459px) {
+    font-size:1.4em;
+  }
+}
+
+header h3 {
+  @include headers($gray, 400, 2em);
+  margin-bottom: 50px;
+  @include media(767px) {
+    font-size:1.5em;
+  }
+  @include media(459px) {
+    color:$white;
+    font-size:1em;
+  }
+}

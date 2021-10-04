@@ -1,0 +1,35 @@
+// issues here
+@mixin media($expected_width) {
+  @if length($expected_width) == 1 {
+    @media (max-width: nth($expected_width, 1)) {
+      @content;
+    }
+  }
+}
+
+@mixin smallScreenMediaQuery {
+  @media (max-width: 450px) {
+      @content;
+  }      
+}
+  
+@mixin navigation_menu($width, $height, $float) {
+  width: $width;
+  height: $height;
+  float: $float;
+}
+
+@mixin socialMediaLogoPlacing($socialMediaLogo, $position, $origin: 0) {
+  background: url($socialMediaLogo) $position $origin;
+}
+
+@mixin headers($color, $font-weight, $font-size, $line-height: 0) {
+  color: $color;
+  font-weight:$font-weight;
+  font-size:$font-size;
+  line-height:$line-height;
+}
+
+  
+  
+  
